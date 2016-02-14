@@ -51,6 +51,7 @@ LOCAL_SRC_FILES:= \
     vendor_init.cpp
 
 
+
 SYSTEM_CORE_INIT_DEFINES := BOARD_CHARGING_MODE_BOOTING_LPM
 
 $(foreach system_core_init_define,$(SYSTEM_CORE_INIT_DEFINES), \
@@ -62,6 +63,7 @@ $(foreach system_core_init_define,$(SYSTEM_CORE_INIT_DEFINES), \
 ifneq ($(TARGET_IGNORE_RO_BOOT_SERIALNO),)
 LOCAL_CFLAGS += -DIGNORE_RO_BOOT_SERIALNO
 endif
+
 
 LOCAL_MODULE:= init
 LOCAL_C_INCLUDES += \
